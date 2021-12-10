@@ -22,11 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var splide = new Splide(".splide", {
         type: "loop",
+        autoplay: true,
     });
-    splide.on("pagination:mounted", function (data) {
-        data.items.forEach(function (item) {
-            item.button.style.display = "none";
-        });
-    });
+    
     splide.mount();
 });
